@@ -11,8 +11,8 @@ class MyHTMLParser(HTMLParser):
         self.links = []
     def  handle_starttag (self, tag, attrs):
         # print "Encountered the beginning of a %s tag" % tag
-        # if tag == "img":
-        if tag == "input":
+        # if tag == "img": # 过滤img标签
+        if tag == "input": # 过滤input标签
             if len(attrs) == 0:
                 pass
             else:
