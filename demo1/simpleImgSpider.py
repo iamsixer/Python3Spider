@@ -11,8 +11,7 @@ class MyHTMLParser(HTMLParser):
         self.links = []
     def  handle_starttag (self, tag, attrs):
         # print "Encountered the beginning of a %s tag" % tag
-        # if tag == "img": # 过滤img标签
-        if tag == "input": # 过滤input标签
+        if tag == "input" or tag == "img": # 过滤input标签 过滤img标签
             if len(attrs) == 0:
                 pass
             else:
@@ -37,13 +36,13 @@ if __name__ == '__main__':  # 程序运行入口
     #weburl = 'http://cl.aueyq.com/htm_data/7/1606/1981579.html'
 
     # 黄毛丫头
-    # weburl = 'http://cl.aueyq.com/htm_data/7/1607/2003628.html'
+    weburl = 'http://cl.aueyq.com/htm_data/7/1607/2003628.html'
 
     # 扶身若柳，玉乳如峰 四
     #weburl = 'http://cl.aueyq.com/htm_data/7/1606/1972513.html'
 
     # 静若处子，浪若骚货
-    weburl = 'http://cl.aueyq.com/htm_data/16/1608/2005244.html'
+    #weburl = 'http://cl.aueyq.com/htm_data/16/1608/2005244.html'
     # 火狐请求头
     # webheaders = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0'}
     # 谷歌请求头
